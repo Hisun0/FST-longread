@@ -1,7 +1,14 @@
+@import url("./variables.css");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: RimmaSans;
+  src: url("../fonts/RIMMA_SANS-BOLD_2.ttf");
 }
 
 html,
@@ -13,6 +20,23 @@ body {
 main {
   height: 100%;
   width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: RimmaSans;
+  color: #fff;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h4 {
+  font-size: 16px;
+  color: var(--cian);
 }
 
 .photo-container {
@@ -51,9 +75,14 @@ main {
 
 .container {
   position: relative;
-  height: 100%;
+  height: 796px;
   width: 100%;
-  background-color: #fff;
+  background-color: var(--orange);
+  box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.25);
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
 }
 
 .logo-wrapper {
@@ -63,7 +92,7 @@ main {
 
   background-color: #fff;
   border-radius: 50px;
-  border: solid 3px #f48d19;
+  border: solid 3px var(--orange);
 
   transform: translate(-50%, -50%);
   opacity: 0;
@@ -73,4 +102,65 @@ main {
   width: 300px;
   height: 200px;
   background-image: url("../images/fst-logo.png");
+}
+
+.bg-orange {
+  background-color: var(--orange);
+}
+
+.bg-cian {
+  background-color: var(--cian);
+}
+
+.container > div {
+  width: 50%;
+  height: 100%;
+}
+
+.jur {
+  background-image: url("../images/press-reporter-fallowing-leads-in-a-case.jpg");
+  background-size: cover;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  transition: top 500ms ease-in-out;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.header-hide {
+  top: -60px;
+}
+
+.header-logo {
+  width: 8%;
+  height: 60px;
+  background-image: url("../images/fst-logo-header.png");
+  background-repeat: no-repeat;
+}
+
+.h4-wrapper {
+  width: 85%;
+  height: 100%;
+  text-align: center;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
