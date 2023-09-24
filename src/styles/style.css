@@ -34,8 +34,12 @@ h1 {
   font-size: 48px;
 }
 
+h2 {
+  font-size: 24px;
+}
+
 h4 {
-  font-size: 16px;
+  font-size: var(calc(--sizeindex));
   color: var(--cian);
 }
 
@@ -49,7 +53,7 @@ h4 {
 .map-photo {
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .map-photo::before {
@@ -57,9 +61,10 @@ h4 {
 
   background-image: url("../images/big.png");
   background-size: cover;
+  background-position: center;
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 .opacity-0 {
@@ -73,16 +78,27 @@ h4 {
   right: 0;
 }
 
-.container {
+.section-container {
   position: relative;
   height: 796px;
   width: 100%;
   background-color: var(--orange);
   box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.25);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.grid-container {
+  max-width: 1500px;
+  margin: auto;
+  width: 100%;
+  height: 100%;
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
+  grid-column-gap: var(--sizeindex);
+  grid-row-gap: var(--sizeindex);
 }
 
 .logo-wrapper {
@@ -112,14 +128,8 @@ h4 {
   background-color: var(--cian);
 }
 
-.container > div {
-  width: 50%;
-  height: 100%;
-}
-
-.jur {
-  background-image: url("../images/press-reporter-fallowing-leads-in-a-case.jpg");
-  background-size: cover;
+.color-cian {
+  color: var(--cian);
 }
 
 .text {
@@ -145,10 +155,18 @@ header {
 }
 
 .header-logo {
+  min-width: 90px;
   width: 8%;
   height: 60px;
-  background-image: url("../images/fst-logo-header.png");
+  background-image: url("../images/fst-logo.png");
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.h2-wrapper {
+  width: 70%;
+  text-align: center;
 }
 
 .h4-wrapper {
@@ -161,6 +179,183 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
+  max-width: 1500px;
+  margin: auto;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.h1-grid {
+  grid-column: 1 / 5;
+  grid-row: 6 / span 2;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.card-stream {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+  background-color: #fff;
+  border-radius: 25px;
+}
+
+.grid-card-top-left {
+  grid-column: 5 / span 4;
+  grid-row: 4 / span 3;
+}
+
+.grid-card-top-right {
+  grid-column: 9 / -1;
+  grid-row: 4 / span 3;
+}
+
+.grid-card-bottom-left {
+  grid-column: 5 / span 4;
+  grid-row: 7 / span 3;
+}
+
+.grid-card-bottom-right {
+  grid-column: 9 / -1;
+  grid-row: 7 / span 3;
+}
+
+.study-stream-photo {
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.journalism {
+  background-image: url("../images/journalism.png");
+}
+
+.advertisement {
+  background-image: url("../images/advertisment.png");
+}
+
+.sociology {
+  background-image: url("../images/sociology.png");
+}
+
+.psychology {
+  background-image: url("../images/psychology.png");
+}
+
+.h1-wrapper {
+  text-align: center;
+}
+
+.another-h1-grid {
+  grid-column: 3 / span 8;
+  grid-row: 2;
+}
+
+.card-feedback {
+  width: 100%;
+  height: 100%;
+
+  background-color: #fff;
+  border-radius: 50px;
+}
+
+.feedback-grid-center {
+  grid-column: 4 / span 6;
+  grid-row: 3 / span 9;
+  z-index: 2;
+}
+
+.feedback-grid-left {
+  position: relative;
+  grid-column: 1 / span 6;
+  grid-row: 3 / span 9;
+
+  transform: rotate(-15deg);
+  top: 5vh;
+  opacity: 0.4;
+}
+
+.feedback-grid-right {
+  position: relative;
+  grid-column: 7 / span 6;
+  grid-row: 3 / span 9;
+
+  transform: rotate(15deg);
+  top: 5vh;
+  opacity: 0.4;
+}
+
+@media (max-width: 1450px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1289px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1159px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .h1-grid {
+    grid-column: 5 / span 4;
+    grid-row: 2 / span 2;
+  }
+
+  .grid-card-top-left {
+    grid-column: 2 / span 5;
+    grid-row: 4 / span 3;
+  }
+
+  .grid-card-top-right {
+    grid-column: 7 / span 5;
+    grid-row: 4 / span 3;
+  }
+
+  .grid-card-bottom-left {
+    grid-column: 2 / span 5;
+    grid-row: 7 / span 3;
+  }
+
+  .grid-card-bottom-right {
+    grid-column: 7 / span 5;
+    grid-row: 7 / span 3;
+  }
+}
+
+@media (max-width: 990px) {
+  h2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 920px) {
+  h1 {
+    font-size: 24px;
+  }
 }

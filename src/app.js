@@ -10,7 +10,7 @@ const showOnScroll = (wt) => {
 };
 
 export default () => {
-  window.addEventListener("scroll", (event) => {
+  window.addEventListener("scroll", () => {
     const scrollPosition = window.scrollY;
     const positionEl = document.querySelector(".position");
     const mapImage = document.querySelector(".map-photo");
