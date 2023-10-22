@@ -1,0 +1,10 @@
+.relative(id="dropdown-button")
+  .flex.flex-row.justify-between.items-center
+    a(class='a__header mr-1') Наши направления
+    +image('dropdown-arrow')
+  div.absolute.z-10.hidden.overflow-hidden.bg-white.border-none.rounded-lg.flex.flex-column.w-72.ps-2(id="dropdown-menu")
+    ul.text-sm.text-black.py-2
+      li(class='a__header mb-1') Журналистика
+      li(class='a__header mb-1') Реклама и связи с общественностью
+      li(class='a__header mb-1') Психология
+      li(class='a__header') Социология

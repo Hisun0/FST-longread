@@ -1,0 +1,35 @@
+include libs/card__about
+
+-
+  const data = [
+    {
+      direction: 'left',
+      text: 'Интернет медиа “ФСТ Медиа” создает медиа контент о ВУЗе, факультете и городе. Данный ресурс включает в себя аудио отдел, который занимается подкастами, а также видео отдел, который выпускает информационный контент.',
+      header: 'ФСТ Медиа',
+      logo: 'fst-media-logo',
+      count: 'double',
+      className: 'text-bard',
+    },
+    {
+      direction: 'right',
+      text: 'Газета «Просто» занимается разработкой контента про ВУЗ. У газеты есть два вида: электронное и печатное издание.',
+      header: 'Просто',
+      logo: 'prosto-logo',
+      count: 'single',
+      className: 'text-purple',
+    },
+    {
+      direction: 'left',
+      text: 'Рекламное агентство "Genium", создаёт проекты и рекламу для ВУЗа. Агентство так же берёт заказы вне института, что даёт ребятам практику.',
+      header: 'Genium',
+      logo: 'genium-logo',
+      count: 'single',
+      className: 'text-genium-cian',
+    },
+  ];
+
+section.container.mx-auto.px-4.mt-36.mb-12
+  div(class='w-1/2 mx-auto flex flex-col items-center')
+    h2.mb-6.mx-auto О нашем факультете
+    p.text-white.mb-6 Факультет социальных технологий («факультет с сердцем») предоставляет широкие возможности для развития и презентации креативности, как в учебной, так и во внеучебной студенческой жизни.
+  +makeCardList(data)

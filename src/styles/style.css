@@ -1,3 +1,142 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url(variables.css);
+
+@font-face {
+  font-family: Rimma-Sans;
+  src: url("../fonts/RIMMA_SANS-BOLD_2.ttf");
+}
+
+@font-face {
+  font-family: Raleway-Light;
+  src: url("../fonts/Raleway/Raleway-Light.ttf");
+}
+
+@font-face {
+  font-family: Raleway-Medium;
+  src: url("../fonts/Raleway/Raleway-Medium.ttf");
+}
+
+@font-face {
+  font-family: Raleway-Bold;
+  src: url("../fonts/Raleway/Raleway-Bold.ttf");
+}
+
+@layer utilities {
+  .text-accent {
+    color: var(--accent);
+  }
+
+  .w-48p {
+    width: 48%;
+  }
+
+  .absolute-center {
+    @apply top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+  }
+
+  .text-orange {
+    color: var(--orange);
+  }
+
+  .text-bard {
+    color: var(--bard);
+  }
+
+  .text-genium-cian {
+    color: var(--genium-cian);
+  }
+
+  .text-purple {
+    color: var(--purple);
+  }
+
+  .h-750px {
+    height: 750px;
+  }
+
+  .bg-cian {
+    background-color: var(--cian);
+  }
+
+  .bg-hover {
+    background-color: var(--cian\:hover);
+  }
+
+  .start-19p {
+    inset-inline-start: 19%;
+  }
+
+  .rounded-tbr-xl {
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+  }
+
+  .rounded-tbl-xl {
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+  }
+
+  .rounded-xl {
+    border-radius: 1.5rem;
+  }
+
+  .rounded-2xl {
+    border-radius: 3rem;
+  }
+
+  .text-light {
+    font-family: Raleway-Light;
+  }
+
+  .text-medium {
+    font-family: Raleway-Medium;
+  }
+
+  .text-bold {
+    font-family: Raleway-Bold;
+  }
+}
+
+.a__header {
+  @apply hover:text-accent cursor-pointer whitespace-nowrap;
+}
+
+.btn {
+  @apply bg-cian px-5 py-2 rounded-full text-white text-sm hover:bg-hover;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Raleway-Medium;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Rimma-Sans;
+  color: var(--orange);
+}
+
+h2 {
+  @apply text-3xl;
+}
+
+h3 {
+  @apply text-2xl;
+}
+
+.bg-black {
+  background-color: var(--bg-black);
+}

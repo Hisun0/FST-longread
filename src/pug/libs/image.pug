@@ -1,0 +1,5 @@
+mixin image(filename, className, extension)
+  if extension == 'svg'
+    img(class=className src=require(`./images/${filename}.svg`))
+  else
+    img(class=className src=require(`./images/${filename}.png`))

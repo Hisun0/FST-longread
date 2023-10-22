@@ -1,5 +1,10 @@
 doctype html
 html(lang="ru")
   include pug/head
-  body
-    .text-3xl.bg-black.text-white Hello, Pug!
+  body.bg-black
+    include pug/header
+    main
+      include pug/hero
+      include pug/about
+      include pug/select
+      include pug/administration

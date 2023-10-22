@@ -1,0 +1,11 @@
+include image
+
+mixin personCard(person)
+  .flex.flex-col.items-center(class='w-1/4')
+    +image(person.image, 'mb-2')
+    p.text-white.text-bold.mb-2.whitespace-nowrap #{person.fullName}
+    if person.description
+      p.text-white.text-medium.mb-2 #{person.post}
+      p.text-white.text-light #{person.description}
+    else
+      p.text-white.text-medium #{person.post}
