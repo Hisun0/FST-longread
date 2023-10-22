@@ -1,18 +1,17 @@
 include libs/image
 
-header
-  .container.mx-auto.px-4.flex.flex-row.justify-between.items-center
-    +image('logo', 'w-44')
-    p.text-white.text-sm.font-bold.lining-nums У нас учится 1487 студентов
-    nav.text-sm.text-white.leading-6
-      ul.flex.space-x-8
-        li
-          include libs/dropdown
-        li
-          a(class='a__header') Интервью с нашими студентами
-        li
-          a(class='a__header') Студенческий актив
-        li
-          a(class='a__header') Музей
+.container.mx-auto.px-4.flex.flex-row.justify-between.items-center
+  +image('logo', 'w-44', 'svg')
+  p.text-white.text-sm.font-bold.lining-nums У нас учится 1487 студентов
+  nav.text-sm.text-white.leading-6
+    ul.flex.space-x-8
+      li
+        include libs/dropdown
+      li
+        a(class='a__header') Интервью с нашими студентами
+      li
+        a(class='a__header') Студенческий актив
+      li
+        a(class='a__header') Музей
 
 

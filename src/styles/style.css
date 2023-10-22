@@ -32,6 +32,10 @@
     width: 48%;
   }
 
+  .h-120 {
+    height: 30rem;
+  }
+
   .absolute-center {
     @apply top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
   }
@@ -60,12 +64,30 @@
     background-color: var(--cian);
   }
 
+  .bg-orange {
+    background-color: var(--orange);
+  }
+
+  .bg-phone {
+    background-color: var(--bg-phone);
+  }
+
   .bg-hover {
     background-color: var(--cian\:hover);
   }
 
   .start-19p {
     inset-inline-start: 19%;
+  }
+
+  .rounded-t-2xl {
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+  }
+
+  .rounded-b-2xl {
+    border-bottom-right-radius: 3rem;
+    border-bottom-left-radius: 3rem;
   }
 
   .rounded-tbr-xl {
@@ -86,6 +108,10 @@
 
   .rounded-2xl {
     border-radius: 3rem;
+  }
+
+  .rounded-3xl {
+    border-radius: 5rem;
   }
 
   .text-light {

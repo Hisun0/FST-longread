@@ -1,0 +1,32 @@
+include libs/image
+include libs/person-card
+
+-
+  const studentsFooter = [
+    {
+      image: 'student-footer-1',
+      fullName: 'Сафонова Эвилина',
+    },
+    {
+      image: 'student-footer-2',
+      fullName: 'Галичая Валерия',
+    },
+    {
+      image: 'student-footer-3',
+      fullName: 'Павлова Анна',
+    },
+    {
+      image: 'student-footer-4',
+      fullName: 'Халевская Анна',
+    },
+  ];
+
+.container.mx-auto.px-4
+  .flex.flex-row.justify-between.py-6.justify-items-center
+    +image('logo', null, 'svg')
+    div(class='flex flex-row w-2/3')
+      +makePersonCards(studentsFooter, null, 'svg')
+    .flex.flex-row.items-center
+      a.text-white.mr-6.cursor-pointer(class='hover:text-accent') Наш сайт
+      +image('vk-icon', null, 'svg')
+    

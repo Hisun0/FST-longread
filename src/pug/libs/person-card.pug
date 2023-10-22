@@ -1,11 +1,12 @@
 include image
 
-mixin personCard(person)
+mixin personCard(person, className = 'text-white', extension)
   .flex.flex-col.items-center(class='w-1/4')
-    +image(person.image, 'mb-2')
-    p.text-white.text-bold.mb-2.whitespace-nowrap #{person.fullName}
-    if person.description
-      p.text-white.text-medium.mb-2 #{person.post}
-      p.text-white.text-light #{person.description}
-    else
-      p.text-white.text-medium #{person.post}
+    +image(person.image, 'mb-2', extension)
+    p.text-bold.mb-2.whitespace-nowrap(class=className) #{person.fullName}
+    p.text-medium.mb-2(class=className) #{person.post}
+    p.text-light(class=className) #{person.description}
+
+mixin makePersonCards(persons)
+  each person in persons
+    +personCard(person)

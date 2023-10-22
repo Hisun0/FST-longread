@@ -1,4 +1,3 @@
-include libs/main__administration
 include libs/person-card
 
 - const hlutkovText = 'За весь период научно-педагогической деятельности Хлутковым А.Д. опубликовано более 60 научных трудов и учебно-методических работ. В том числе — 4 монографии, 18 статей в рецензируемых изданиях (рекомендованных ВАК Минобрнауки России), 2 статьи в индексируемых журналах (Scopus) и 9 учебно-методических работ.';
@@ -41,10 +40,10 @@ include libs/person-card
     post: 'Доцент кафедры журналистики и медиакоммуникаций, кандидат политических наук',
   };
 
-section.container.mx-auto.px-4.mt-36.mb-12
+section.container.mx-auto.px-4.mb-12
   h2.text-center.mb-8 Администрация
   .flex.flex-row.justify-between.mb-8
-    +makeMainAdmins(persons)
+    +makePersonCards(persons)
   h3.text-center.text-white.mb-8 Интервью с представителями администрации
   .flex.flex-row.mb-8
     +personCard(pasinkova)
