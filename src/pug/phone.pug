@@ -1,0 +1,17 @@
+include libs/person-card
+include libs/image
+
+-
+  const guznova = {
+    image: 'guznova',
+    fullName: 'Гузнова Дарина',
+    post: 'Главный куратор',
+  };
+
+h3.text-white.text-center.mb-12 Интервью с главным куратором
+.flex.flex-row.justify-between
+  +personCard(guznova)
+  .flex.flex-col.bg-phone.rounded-2xl(class='w-1/3')
+    include libs/header__phone
+    include libs/chat__phone
+    include libs/footer__phone

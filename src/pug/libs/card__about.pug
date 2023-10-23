@@ -1,0 +1,38 @@
+mixin aboutCard(direction, text, header, logo, headerCount, className)
+  - let subHeader1;
+  - let subHeader2; 
+  
+  if headerCount == 'double'
+    - const [first, second] = header.split(' ');
+    - subHeader1 = first;
+    - subHeader2 = second;
+  
+  .flex.flex-col.mb-6
+    .w-full.bg-white.rounded-2xl.px-36
+      .flex.flex-row.w-full.justify-between.items-center.py-6
+        if direction == 'left'
+          +image(logo)
+          div(class='w-1/2')  
+            .flex.flex-col.items-center
+              if headerCount == 'double'
+                h3.mb-2
+                  span #{subHeader1} 
+                  span(class=className) #{subHeader2}
+              else
+                h3.mb-2(class=className) #{header}
+              p.text-black #{text}
+        else
+          div(class='w-1/2')  
+            .flex.flex-col.items-center
+              if headerCount == 'double'
+                h3.mb-2
+                  span #{subHeader1} 
+                  span(class=className) #{subHeader2}
+              else
+                h3.mb-2(class=className) #{header}
+              p.text-black #{text}
+          +image(logo)
+
+mixin makeCardList(data)
+  each card in data
+    +aboutCard(card.direction, card.text, card.header, card.logo, card.count, card.className)

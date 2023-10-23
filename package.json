@@ -5,22 +5,29 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "webpack serve",
-    "build": "webpack",
-    "deploy": "gh-pages -d dist"
+    "start": "webpack serve"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.16",
     "css-loader": "^6.8.1",
     "html-webpack-plugin": "^5.5.3",
+    "postcss": "^8.4.31",
+    "postcss-loader": "^7.3.3",
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
     "style-loader": "^3.3.3",
-    "webpack": "^5.88.2",
+    "tailwindcss": "^3.3.3",
+    "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "swiper": "^10.3.0"
+    "gsap": "^3.12.2",
+    "locomotive-scroll": "^4.1.4",
+    "swiper": "^10.3.1",
+    "tw-elements": "^1.0.0"
   }
 }

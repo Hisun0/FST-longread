@@ -1,0 +1,17 @@
+include libs/image
+
+.container.mx-auto.px-4.flex.flex-row.justify-between.items-center
+  +image('logo', 'w-44', 'svg')
+  p.text-white.text-sm.font-bold.lining-nums У нас учится 1487 студентов
+  nav.text-sm.text-white.leading-6
+    ul.flex.space-x-8
+      li
+        a(href='#select' class='a__header') Наши направления
+      li
+        a(href='#interview' class='a__header') Интервью с нашими студентами
+      li
+        a(href='#active' class='a__header') Студенческий актив
+      li
+        a(href='#muzeum' class='a__header') Музей
+
+

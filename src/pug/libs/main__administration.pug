@@ -1,0 +1,6 @@
+include person-card
+
+mixin makePersonCards(persons)
+  each person in persons
+    +personCard(person)
+  
