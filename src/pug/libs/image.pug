@@ -1,5 +1,5 @@
-mixin image(filename, className, extension)
+mixin image(filename, className, extension, id)
   if extension == 'svg'
-    img(class=className src=require(`./images/${filename}.svg`))
+    img(class=className id=id src=require(`./images/${filename}.svg`))
   else
-    img(class=className src=require(`./images/${filename}.png`))
+    img(class=className id=id src=require(`./images/${filename}.png`))

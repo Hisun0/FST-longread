@@ -27,6 +27,7 @@
   "dependencies": {
     "gsap": "^3.12.2",
     "locomotive-scroll": "^4.1.4",
+    "swiper": "^10.3.1",
     "tw-elements": "^1.0.0"
   }
 }

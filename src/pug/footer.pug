@@ -27,6 +27,7 @@ include libs/person-card
     div(class='flex flex-row w-2/3')
       +makePersonCards(studentsFooter, null, 'svg')
     .flex.flex-row.items-center
-      a.text-white.mr-6.cursor-pointer(class='hover:text-accent') Наш сайт
-      +image('vk-icon', null, 'svg')
+      a.text-white.mr-6.cursor-pointer(href='https://www.fst-sziu.ru/' class='hover:text-accent') Наш сайт  
+      a(href='https://vk.com/fst_ranepaspb')
+        +image('vk-icon', null, 'svg')
     

@@ -166,3 +166,15 @@ h3 {
 .bg-black {
   background-color: var(--bg-black);
 }
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.swiper-button-prev {
+  color: var(--accent) !important;
+}
+
+.swiper-button-next {
+  color: var(--accent) !important;
+}
